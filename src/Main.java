@@ -53,29 +53,8 @@ public class Main {
         System.out.println("Задача 4");
         int[] arr = generateRandomArray();
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        int fullNameLength = 0;
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            if (reverseFullName[i] == ' ') {
-                break;
-            }
-            fullNameLength++;
+        for(int i = reverseFullName.length - 1; i >= 0; i--)
+            System.out.print(reverseFullName[i]);
         }
-        for (int i = 0; i < reverseFullName.length; i++) {
-            if (reverseFullName[i] == ' ') {
-                continue;
-            }
-            int j = i;
-            while (j < reverseFullName.length && reverseFullName[j] != ' ') {
-                j++;
-            }
-            for (int k = j - 1; k >= i; k--) {
-                System.out.print(reverseFullName[k]);
-            }
-            i = j;
-            if (i >= reverseFullName.length - fullNameLength) {
-                break;
-            }
-            System.out.print(" ");
-        }
-    }
 }
+
